@@ -10,7 +10,6 @@
  * - 각 상세 포트폴리오로 명확한 진입점 제공
  */
 import { ArrowUpRight, Braces, Code2, Mail, Workflow } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const tracks = [
@@ -66,12 +65,13 @@ export default function Home() {
         </div>
 
         <div className="profile-stamp" aria-label="왕채은 프로필">
-          <Image
+          {/* 정적 로컬 이미지는 현재 Sites 런타임의 Next Image 클라이언트 충돌을 피하기 위해 직접 제공한다. */}
+          {/* oxlint-disable-next-line nextjs/no-img-element */}
+          <img
             src="/profile.png"
             alt="왕채은 프로필 사진"
-            width={96}
-            height={96}
-            priority
+            width="96"
+            height="96"
           />
           <span>Available for opportunities</span>
         </div>

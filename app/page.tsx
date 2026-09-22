@@ -24,7 +24,7 @@ export default function Home() {
         <div className="home-intro-note">
           <div className="intro-profile">
             {/* oxlint-disable-next-line nextjs/no-img-element */}
-            <img src="/portrait.jpg" alt="왕채은" width="42" height="54" />
+            <img src="/portrait.jpg" alt="왕채은" width="350" height="450" />
             <span>
               왕채은<small>AI · BACKEND / PRODUCT</small>
             </span>

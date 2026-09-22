@@ -170,6 +170,10 @@ svg {
   margin-bottom: 20px;
 }
 .intro-profile img {
+  width: clamp(5rem, calc(3rem + 10vw), 10rem);
+  max-width: 40%;
+  height: auto;
+  flex-shrink: 0;
   object-fit: cover;
   border-radius: 4px;
 }

@@ -260,54 +260,26 @@ export default function DeveloperPortfolio() {
         ))}
       </section>
 
-      <section className="capability-grid" aria-label="핵심 개발 역량">
-        <article>
-          <span>01 / AI ENGINEERING</span>
-          <h2>모델 응답과 업무 판단의 연결</h2>
-          <p>
-            규정 검색에는 RAG를, 데이터 변경에는 권한을 확인하는 Tool을
-            사용합니다. 모델의 응답과 DB에서 확정한 업무 결과를 구분합니다.
-          </p>
-        </article>
-        <article>
-          <span>02 / BACKEND</span>
-          <h2>중복 실행과 실패를 고려한 구조</h2>
-          <p>
-            Spring Boot·RabbitMQ에서 Outbox와 멱등 처리를 구현하고, 소유권·동시
-            신청·롤백·복구를 자동 테스트로 확인했습니다.
-          </p>
-        </article>
-        <article>
-          <span>03 / PRODUCT DELIVERY</span>
-          <h2>판단 근거를 보여주는 화면</h2>
-          <p>
-            React 확장 프로그램에서 인용문과 원문을 비교하고 분류 결과를
-            확인하도록 구성했습니다. 분류 결과와 함께 사용자가 살펴볼 근거를
-            연결합니다.
-          </p>
-        </article>
-      </section>
-
-      <section className="stack-section">
+      <section className="stack-section" aria-labelledby="stack-title">
         <div>
           <p className="eyebrow">TECH STACK</p>
-          <h2>사용 기술</h2>
+          <h2 id="stack-title">사용 기술</h2>
         </div>
         <div className="stack-groups">
           <article>
-            <h3>Languages & Frameworks</h3>
+            <h3>언어·프레임워크</h3>
             <p>
               Java · Spring Boot · Spring Security · Python · FastAPI · React
             </p>
           </article>
           <article>
-            <h3>AI & Data</h3>
+            <h3>AI·데이터</h3>
             <p>
               Spring AI · RAG · LangChain · KoBERT · SBERT · MPNet · KoELECTRA
             </p>
           </article>
           <article>
-            <h3>Storage & Verification</h3>
+            <h3>저장소·검증</h3>
             <p>RabbitMQ · JDBC · H2 · Redis · JUnit 5 · GitHub Actions · Git</p>
           </article>
         </div>

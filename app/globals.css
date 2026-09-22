@@ -686,29 +686,25 @@ svg {
   font-size: 12px;
   color: var(--muted);
 }
-.principles,
-.capability-grid {
+.principles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   padding: 40px 0 64px;
   border-top: 1px solid var(--line);
 }
-.principles span,
-.capability-grid span {
+.principles span {
   color: var(--muted);
   font-size: 12px;
   letter-spacing: 0.04em;
 }
-.principles h2,
-.capability-grid h2 {
+.principles h2 {
   margin: 20px 0 12px;
   font-size: 21px;
   font-weight: 550;
   line-height: 1.5;
 }
-.principles p,
-.capability-grid p {
+.principles p {
   margin: 0;
   color: var(--muted);
   font-size: 16px;
@@ -874,8 +870,7 @@ svg {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  .principles,
-  .capability-grid {
+  .principles {
     gap: 24px;
   }
   .experience-band,
@@ -1061,14 +1056,12 @@ svg {
   .outcome-grid strong {
     font-size: 28px;
   }
-  .principles,
-  .capability-grid {
+  .principles {
     grid-template-columns: 1fr;
     gap: 28px;
     padding-bottom: 40px;
   }
-  .principles h2,
-  .capability-grid h2 {
+  .principles h2 {
     margin-top: 12px;
   }
   .experience-band,

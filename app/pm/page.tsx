@@ -54,36 +54,6 @@ const cases = [
     href: 'https://github.com/chaeeunwang/Quote-Distortion-Detection',
     sourceLabel: 'GitHub에서 코드·결과 보기',
   },
-  {
-    id: 'sss',
-    number: '03',
-    title: '스사싣',
-    subtitle: '생각과 일상에서 시작하는 SKALA 교육생 소셜 매칭',
-    period: '2026.09 · 서비스 기획·UI 프로토타입',
-    role: '서비스 범위·공개 정책 결정 · 사용자 흐름 · UI·API·DB 설계',
-    problem:
-      '교육생이 서로를 알아가는 서비스에서 시험과 점수가 참여 부담이 될 수 있다고 가정했습니다. 성적보다 공개한 생각·풀이·일상을 통해 사람을 발견하는 흐름을 기획했습니다.',
-    decisions: [
-      '코테·SKCT는 선택형 자기표현 콘텐츠로 두고 필수 응시·점수·랭킹·채점 서버를 범위에서 제외',
-      '카드·공개 답변·라운지에서 프로필 → 관심 → 상호 관심 → 채팅으로 이어지는 핵심 흐름 구성',
-      '단방향 관심과 비공개 설문은 숨기고, 상호 관심일 때만 연결하도록 공개 범위 설계',
-      'AI는 규칙으로 거른 적격 후보 중 추천에만 사용하도록 설계하고, 소개글·대화의 대행은 제외',
-    ],
-    outcomes: [
-      ['Prototype', '반응형 화면·로컬 상호작용'],
-      ['API · DB', '화면에서 개발 계약으로 연결'],
-      ['정합성 검사', '명세 구조·참조 검사 통과'],
-    ],
-    evidence:
-      'OpenAPI 31개 경로·41개 operation, DBML 18개 테이블을 설계했습니다. 인증·서버·DB·AI 추천은 미연결 상태이며, 다음 검증은 교육생의 참여 부담과 공개 범위에 대한 사용자 확인입니다.',
-    tags: [
-      '서비스 범위',
-      '공개 정책',
-      '사용자 흐름',
-      'UI Prototype',
-      'OpenAPI',
-    ],
-  },
 ] as const;
 
 export default function PmPortfolio() {
@@ -128,17 +98,15 @@ export default function PmPortfolio() {
                   <h3>{item.title}</h3>
                   <p className="case-subtitle">{item.subtitle}</p>
                 </div>
-                {'href' in item && (
-                  <a
-                    className="source-link"
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {item.sourceLabel}{' '}
-                    <ArrowUpRight size={16} aria-hidden="true" />
-                  </a>
-                )}
+                <a
+                  className="source-link"
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {item.sourceLabel}{' '}
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </a>
               </div>
 
               <div className="role-note">
@@ -211,10 +179,7 @@ export default function PmPortfolio() {
           <article>
             <time>2026.07 — 현재</time>
             <h3>SK AX SKALA</h3>
-            <p>
-              AI·백엔드 교육 수강 중 · HR 업무 챗봇 구현, 스사싣 서비스
-              기획·설계
-            </p>
+            <p>AI·백엔드 교육 수강 중 · HR 업무 챗봇 구현</p>
           </article>
           <article>
             <time>2025.08 — 12</time>

@@ -198,7 +198,7 @@ export default function Home() {
           <a href="/pm/">
             <div>
               <h3>Product Manager</h3>
-              <p>DeepShield · QDD · 스사싣의 문제와 선택</p>
+              <p>DeepShield · QDD의 문제와 선택</p>
             </div>
             <ArrowUpRight size={24} aria-hidden="true" />
           </a>

@@ -3,8 +3,34 @@ import { PortfolioHeader, PortfolioFooter } from '../portfolio-shell';
 
 const cases = [
   {
-    id: 'qdd',
+    id: 'deepshield',
     number: '01',
+    title: 'DeepShield',
+    subtitle: '딥페이크 피해를 사후 탐지가 아닌 사전 예방으로 전환',
+    period: '2024 · 3인 팀',
+    role: '문제 정의 · 핵심 필터 설계·구현 · 시각 품질 조정',
+    problem:
+      '사진이 공유된 뒤 피해에 대응하기 어렵다는 문제에 주목했습니다. 업로드 전에 얼굴 영역에 적대적 노이즈를 적용하는 예방형 필터를 만들었습니다.',
+    decisions: [
+      '사용자 사진의 얼굴 영역에만 Adversarial 노이즈를 적용하는 방식 선택',
+      '랜드마크 기반 영역 탐지로 불필요한 이미지 훼손 최소화',
+      'Feathering·Blur로 얼굴 영역 경계와 노이즈의 시각적 이질감 조정',
+      '팀으로 필터를 앱에 연결하고 사용자가 사진을 공유하기 전 적용하는 흐름 제시',
+    ],
+    outcomes: [
+      ['App Store', '앱 출시 · 팀 결과'],
+      ['최우수상', '체인지메이커스 포럼 · 팀 수상'],
+      ['언론 보도', '뉴스1 개발팀 인터뷰'],
+    ],
+    evidence:
+      '담당한 품질 조정은 노이즈의 시각적 이질감을 줄이는 작업입니다. 이를 딥페이크 방어 성능의 정량적 개선으로 제시하지 않습니다.',
+    tags: ['Problem Framing', 'MVP', 'Risk & Trade-off', 'AI Safety'],
+    href: 'https://www.news1.kr/society/incident-accident/5546773',
+    sourceLabel: '뉴스1에서 개발팀 인터뷰 보기',
+  },
+  {
+    id: 'qdd',
+    number: '02',
     title: 'Quote Distortion Detection',
     subtitle: '뉴스 인용 왜곡을 사용자가 즉시 검증하는 Chrome Extension',
     period: '2025.08 — 2025.12 · 3인 팀',
@@ -30,7 +56,7 @@ const cases = [
   },
   {
     id: 'sss',
-    number: '02',
+    number: '03',
     title: '스사싣',
     subtitle: '생각과 일상에서 시작하는 SKALA 교육생 소셜 매칭',
     period: '2026.09 · 서비스 기획·UI 프로토타입',
@@ -57,32 +83,6 @@ const cases = [
       'UI Prototype',
       'OpenAPI',
     ],
-  },
-  {
-    id: 'deepshield',
-    number: '03',
-    title: 'DeepShield',
-    subtitle: '딥페이크 피해를 사후 탐지가 아닌 사전 예방으로 전환',
-    period: '2024 · 3인 팀',
-    role: '문제 정의 · 핵심 필터 설계·구현 · 시각 품질 조정',
-    problem:
-      '사진이 공유된 뒤 피해에 대응하기 어렵다는 문제에 주목했습니다. 업로드 전에 얼굴 영역에 적대적 노이즈를 적용하는 예방형 필터를 만들었습니다.',
-    decisions: [
-      '사용자 사진의 얼굴 영역에만 Adversarial 노이즈를 적용하는 방식 선택',
-      '랜드마크 기반 영역 탐지로 불필요한 이미지 훼손 최소화',
-      'Feathering·Blur로 얼굴 영역 경계와 노이즈의 시각적 이질감 조정',
-      '팀으로 필터를 앱에 연결하고 사용자가 사진을 공유하기 전 적용하는 흐름 제시',
-    ],
-    outcomes: [
-      ['App Store', '앱 출시 · 팀 결과'],
-      ['최우수상', '체인지메이커스 포럼 · 팀 수상'],
-      ['언론 보도', '뉴스1 개발팀 인터뷰'],
-    ],
-    evidence:
-      '담당한 품질 조정은 노이즈의 시각적 이질감을 줄이는 작업입니다. 이를 딥페이크 방어 성능의 정량적 개선으로 제시하지 않습니다.',
-    tags: ['Problem Framing', 'MVP', 'Risk & Trade-off', 'AI Safety'],
-    href: 'https://www.news1.kr/society/incident-accident/5546773',
-    sourceLabel: '뉴스1에서 개발팀 인터뷰 보기',
   },
 ] as const;
 

@@ -339,12 +339,14 @@ svg {
 }
 .project-evidence {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 28px;
   margin: 24px 0 20px;
 }
 .project-evidence > strong {
   display: flex;
+  flex-shrink: 0;
   align-items: baseline;
   gap: 10px;
   font-size: 36px;

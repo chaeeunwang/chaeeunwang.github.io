@@ -4,6 +4,42 @@ import { PortfolioHeader, PortfolioFooter } from '../portfolio-shell';
 const projects = [
   {
     id: 'P01',
+    anchor: 'qdd',
+    title: 'Quote Distortion Detection',
+    label: '2025.08–12 · NLP · 3인 팀',
+    summary:
+      '기사의 인용문을 원 발언과 비교하는 Chrome 확장 프로그램입니다. 원문을 찾는 과정과 의미 왜곡을 판단하는 과정을 나누고, 결과를 비교할 수 있는 화면을 만들었습니다.',
+    role: '문제 정의·서비스 기획·전체 처리 흐름 설계·React 확장 프로그램 화면 구현, 데이터 구성·모델 선정 참여',
+    architecture: [
+      '인용문 추출',
+      '번역 · 원 발언 검색',
+      'SBERT 문장 정렬',
+      'MPNet 왜곡 분류',
+      'React 확장 프로그램',
+    ],
+    decisions: [
+      [
+        '검색과 판단을 분리',
+        '잘못 찾은 원문을 비교하면 분류 결과도 믿기 어렵습니다. 원 발언 후보 검색과 SBERT 정렬, MPNet 분류를 구분해 전체 처리 흐름을 설계했습니다.',
+      ],
+      [
+        '비교 근거를 화면에 표시',
+        '왜곡 여부만 보여주는 대신 기사 인용문 하이라이트와 원문 비교, 분류 결과를 연결하는 React 확장 프로그램 화면을 구현했습니다.',
+      ],
+      [
+        '팀의 데이터·모델 검토에 참여',
+        '데이터 증강·라벨링 기준과 모델 선정에 참여했습니다. 공개 README의 전체 데이터는 정상 2,510건·왜곡 2,136건으로 총 4,646건입니다.',
+      ],
+    ],
+    stack: ['Python', 'SBERT', 'MPNet', 'React', 'JavaScript', 'Git'],
+    result:
+      '팀 평가 결과 F1 Macro 0.8667 · 전체 데이터 4,646건 · Chrome 확장 프로그램 구현',
+    scope:
+      '공개 README 기준으로 학습 3,717건·검증 929건을 사용한 팀 평가입니다. 모델 가중치가 공개되어 있지 않아 평가를 별도로 재현하지는 않았습니다.',
+    href: 'https://github.com/chaeeunwang/Quote-Distortion-Detection',
+  },
+  {
+    id: 'P02',
     anchor: 'hr-leave-assistant',
     title: 'HR Leave Assistant',
     label: '2026.08 · SKALA 개인 실습 확장',
@@ -48,7 +84,7 @@ const projects = [
     href: 'https://github.com/chaeeunwang/hr-leave-assistant',
   },
   {
-    id: 'P02',
+    id: 'P03',
     anchor: 'chatbot',
     title: 'sLLM 챗봇 백엔드',
     label: '2025.02–05 · Aphrosys 인턴',
@@ -82,42 +118,6 @@ const projects = [
       '질문 분류·모델 라우팅, 세션 문맥 구분, 개인정보 탐지·마스킹 관련 백엔드 개발 보조',
     scope:
       '공개 이력과 업무 기록에 근거한 담당 기능입니다. 위 구성은 기능의 묶음이며 실제 호출 순서를 뜻하지 않습니다.',
-  },
-  {
-    id: 'P03',
-    anchor: 'qdd',
-    title: 'Quote Distortion Detection',
-    label: '2025.08–12 · NLP · 3인 팀',
-    summary:
-      '기사의 인용문을 원 발언과 비교하는 Chrome 확장 프로그램입니다. 원문을 찾는 과정과 의미 왜곡을 판단하는 과정을 나누고, 결과를 비교할 수 있는 화면을 만들었습니다.',
-    role: '문제 정의·서비스 기획·전체 처리 흐름 설계·React 확장 프로그램 화면 구현, 데이터 구성·모델 선정 참여',
-    architecture: [
-      '인용문 추출',
-      '번역 · 원 발언 검색',
-      'SBERT 문장 정렬',
-      'MPNet 왜곡 분류',
-      'React 확장 프로그램',
-    ],
-    decisions: [
-      [
-        '검색과 판단을 분리',
-        '잘못 찾은 원문을 비교하면 분류 결과도 믿기 어렵습니다. 원 발언 후보 검색과 SBERT 정렬, MPNet 분류를 구분해 전체 처리 흐름을 설계했습니다.',
-      ],
-      [
-        '비교 근거를 화면에 표시',
-        '왜곡 여부만 보여주는 대신 기사 인용문 하이라이트와 원문 비교, 분류 결과를 연결하는 React 확장 프로그램 화면을 구현했습니다.',
-      ],
-      [
-        '팀의 데이터·모델 검토에 참여',
-        '데이터 증강·라벨링 기준과 모델 선정에 참여했습니다. 공개 README의 전체 데이터는 정상 2,510건·왜곡 2,136건으로 총 4,646건입니다.',
-      ],
-    ],
-    stack: ['Python', 'SBERT', 'MPNet', 'React', 'JavaScript', 'Git'],
-    result:
-      '팀 평가 결과 F1 Macro 0.8667 · 전체 데이터 4,646건 · Chrome 확장 프로그램 구현',
-    scope:
-      '공개 README 기준으로 학습 3,717건·검증 929건을 사용한 팀 평가입니다. 모델 가중치가 공개되어 있지 않아 평가를 별도로 재현하지는 않았습니다.',
-    href: 'https://github.com/chaeeunwang/Quote-Distortion-Detection',
   },
   {
     id: 'P04',

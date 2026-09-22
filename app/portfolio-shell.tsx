@@ -1,5 +1,5 @@
 /* oxlint-disable nextjs/no-html-link-for-pages -- Native links keep static Pages navigation independent of a client router. */
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 export function PortfolioHeader({
   active = 'home',
@@ -32,7 +32,7 @@ export function PortfolioHeader({
             Developer
           </a>
           <a className="header-contact" href="#contact">
-            Contact <ArrowUpRight size={15} aria-hidden="true" />
+            Contact <ArrowDown size={15} aria-hidden="true" />
           </a>
         </nav>
       </header>

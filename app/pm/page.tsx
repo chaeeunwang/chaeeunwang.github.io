@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { PortfolioHeader, PortfolioFooter } from '../portfolio-shell';
 
 const cases = [
@@ -26,7 +26,7 @@ const cases = [
       '담당한 품질 조정은 노이즈의 시각적 이질감을 줄이는 작업입니다. 이를 딥페이크 방어 성능의 정량적 개선으로 제시하지 않습니다.',
     tags: ['Problem Framing', 'MVP', 'Risk & Trade-off', 'AI Safety'],
     href: 'https://www.news1.kr/society/incident-accident/5546773',
-    sourceLabel: '뉴스1에서 개발팀 인터뷰 보기',
+    sourceLabel: '개발팀 인터뷰',
   },
   {
     id: 'qdd',
@@ -52,7 +52,7 @@ const cases = [
       '공개 README 기준. 학습 3,717건·검증 929건으로 나눴으며, 위 수치는 팀의 모델 평가 결과입니다.',
     tags: ['Product Strategy', 'User Flow', 'Data Strategy', 'Figma', 'React'],
     href: 'https://github.com/chaeeunwang/Quote-Distortion-Detection',
-    sourceLabel: 'GitHub에서 코드·결과 보기',
+    sourceLabel: 'GitHub',
   },
 ] as const;
 
@@ -75,7 +75,7 @@ export default function PmPortfolio() {
         <nav className="case-navigation" aria-label="제품 사례 바로가기">
           {cases.map((item) => (
             <a key={item.id} href={`#${item.id}`}>
-              {item.title} <ArrowUpRight size={15} aria-hidden="true" />
+              {item.title} <ArrowDown size={15} aria-hidden="true" />
             </a>
           ))}
         </nav>
@@ -83,9 +83,7 @@ export default function PmPortfolio() {
 
       <section className="case-section" id="cases">
         <div className="section-heading">
-          <p className="eyebrow">SELECTED WORK</p>
-          <h2>문제에서 제품까지</h2>
-          <p>사용자 문제, 맡은 역할, 핵심 선택과 결과를 담았습니다.</p>
+          <h2>기획 사례</h2>
         </div>
 
         {cases.map((item) => (
@@ -98,6 +96,8 @@ export default function PmPortfolio() {
                   <h3>{item.title}</h3>
                   <p className="case-subtitle">{item.subtitle}</p>
                 </div>
+              </div>
+              <div className="project-links">
                 <a
                   className="source-link"
                   href={item.href}
@@ -113,6 +113,15 @@ export default function PmPortfolio() {
                 <strong>담당 역할</strong>
                 <span>{item.role}</span>
               </div>
+              <div className="outcome-grid">
+                {item.outcomes.map(([value, label]) => (
+                  <div key={label}>
+                    <strong>{value}</strong>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="evidence-note">{item.evidence}</p>
               <div className="case-columns">
                 <div>
                   <h4>해결할 문제</h4>
@@ -127,15 +136,6 @@ export default function PmPortfolio() {
                   </ol>
                 </div>
               </div>
-              <div className="outcome-grid">
-                {item.outcomes.map(([value, label]) => (
-                  <div key={label}>
-                    <strong>{value}</strong>
-                    <span>{label}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="case-subtitle">{item.evidence}</p>
               <ul className="tag-list" aria-label={`${item.title} 역량`}>
                 {item.tags.map((tag) => (
                   <li key={tag}>{tag}</li>

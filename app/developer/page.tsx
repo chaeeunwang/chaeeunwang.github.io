@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { PortfolioHeader, PortfolioFooter } from '../portfolio-shell';
 
 const projects = [
@@ -176,14 +176,13 @@ export default function DeveloperPortfolio() {
           흐름을 구현합니다.
         </h1>
         <p className="lead">
-          모델의 응답을 사용자 화면과 실제 업무 처리로 연결합니다. 권한과 상태,
-          중복 실행을 다룬 구현을 중심으로, 제가 맡은 역할과 확인한 결과를
-          구분해 정리했습니다.
+          모델의 응답을 사용자 화면과 업무 처리로 연결합니다. 권한과 상태, 중복
+          실행을 고려해 백엔드를 구현합니다.
         </p>
         <nav className="case-navigation" aria-label="구현 사례 바로가기">
           {projects.map((project) => (
             <a key={project.anchor} href={`#${project.anchor}`}>
-              {project.title} <ArrowUpRight size={15} aria-hidden="true" />
+              {project.title} <ArrowDown size={15} aria-hidden="true" />
             </a>
           ))}
         </nav>
@@ -191,12 +190,7 @@ export default function DeveloperPortfolio() {
 
       <section className="project-section" id="projects">
         <div className="section-heading">
-          <p className="eyebrow">SELECTED WORK</p>
-          <h2>구현과 판단의 기록</h2>
-          <p>
-            해결하려던 문제와 구현 판단, 개인 역할과 프로젝트 결과를 함께
-            정리했습니다.
-          </p>
+          <h2>개발 사례</h2>
         </div>
 
         {projects.map((project) => (
@@ -208,28 +202,36 @@ export default function DeveloperPortfolio() {
             <div className="project-side">
               <span>{project.id}</span>
               <p>{project.label}</p>
-              {'href' in project && project.href ? (
-                <a
-                  className="source-link"
-                  href={project.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub에서 코드·결과 보기{' '}
-                  <ArrowUpRight size={15} aria-hidden="true" />
-                </a>
-              ) : null}
             </div>
             <div className="project-content">
               <div className="project-title">
                 <h3>{project.title}</h3>
               </div>
               <p className="project-summary">{project.summary}</p>
+              {'href' in project && project.href ? (
+                <div className="project-links">
+                  <a
+                    className="source-link"
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub <ArrowUpRight size={15} aria-hidden="true" />
+                  </a>
+                </div>
+              ) : null}
 
               <div className="role-note">
                 <strong>내 역할</strong>
                 <span>{project.role}</span>
               </div>
+              <div className="result-note">
+                <strong>결과</strong>
+                <span>{project.result}</span>
+              </div>
+              <p className="evidence-note">
+                <strong>확인 범위</strong> · {project.scope}
+              </p>
 
               <div className="architecture-flow" aria-label="주요 구성">
                 {project.architecture.map((component) => (
@@ -248,13 +250,6 @@ export default function DeveloperPortfolio() {
                 ))}
               </div>
 
-              <div className="result-note">
-                <strong>결과</strong>
-                <span>{project.result}</span>
-              </div>
-              <p className="project-summary">
-                <strong>확인 범위</strong> · {project.scope}
-              </p>
               <ul className="tag-list" aria-label="사용 기술">
                 {project.stack.map((technology) => (
                   <li key={technology}>{technology}</li>

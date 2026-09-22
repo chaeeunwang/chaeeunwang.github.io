@@ -1,4 +1,4 @@
-/* oxlint-disable nextjs/no-html-link-for-pages -- Native links avoid the deployed Vinext RSC navigation failure. */
+/* oxlint-disable nextjs/no-html-link-for-pages -- Native links keep static Pages navigation independent of a client router. */
 import { ArrowUpRight } from 'lucide-react';
 
 export function PortfolioHeader({
@@ -22,11 +22,11 @@ export function PortfolioHeader({
           >
             Work
           </a>
-          <a href="/pm" aria-current={active === 'pm' ? 'page' : undefined}>
+          <a href="/pm/" aria-current={active === 'pm' ? 'page' : undefined}>
             PM
           </a>
           <a
-            href="/developer"
+            href="/developer/"
             aria-current={active === 'developer' ? 'page' : undefined}
           >
             Developer

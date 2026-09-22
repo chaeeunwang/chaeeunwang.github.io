@@ -1,4 +1,4 @@
-/* oxlint-disable nextjs/no-html-link-for-pages -- Native links avoid the deployed Vinext RSC navigation failure. */
+/* oxlint-disable nextjs/no-html-link-for-pages -- Native links keep static Pages navigation independent of a client router. */
 import { ArrowDown, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { PortfolioFooter, PortfolioHeader } from './portfolio-shell';
 
@@ -102,10 +102,10 @@ export default function Home() {
               </p>
             </div>
             <div className="project-links">
-              <a className="text-link" href="/pm#qdd">
+              <a className="text-link" href="/pm/#qdd">
                 제품 기획 <ArrowUpRight size={16} aria-hidden="true" />
               </a>
-              <a className="text-link" href="/developer#qdd">
+              <a className="text-link" href="/developer/#qdd">
                 구현 과정 <ArrowUpRight size={16} aria-hidden="true" />
               </a>
               <a
@@ -141,7 +141,7 @@ export default function Home() {
               <span aria-hidden="true">·</span>
               <span>Context</span>
             </div>
-            <a className="text-link" href="/developer#chatbot">
+            <a className="text-link" href="/developer/#chatbot">
               구현 과정 보기 <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           </article>
@@ -159,7 +159,7 @@ export default function Home() {
               <span>팀 결과 · App Store 출시</span>
               <span>체인지메이커스 포럼 최우수상</span>
             </div>
-            <a className="text-link" href="/pm#deepshield">
+            <a className="text-link" href="/pm/#deepshield">
               문제와 해결 과정 <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           </article>
@@ -176,14 +176,14 @@ export default function Home() {
           </h2>
         </div>
         <div className="perspective-links">
-          <a href="/pm">
+          <a href="/pm/">
             <div>
               <h3>Product Manager</h3>
               <p>QDD · 스사싣 · DeepShield의 문제와 선택</p>
             </div>
             <ArrowUpRight size={24} aria-hidden="true" />
           </a>
-          <a href="/developer">
+          <a href="/developer/">
             <div>
               <h3>AI & Backend Developer</h3>
               <p>HR 업무 챗봇 · 인턴 경험 · NLP 구현과 검증</p>

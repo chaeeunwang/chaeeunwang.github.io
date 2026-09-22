@@ -131,7 +131,7 @@ export default function Home() {
           <article>
             <p className="project-category">02 / AI PRODUCT · 2025</p>
             <h3>
-              <a href="/pm/#qdd">Quote Distortion Detection</a>
+              <a href="/developer/#qdd">Quote Distortion Detection</a>
             </h3>
             <p className="project-description">
               뉴스의 인용문은 원래 발언과 같은 의미일까요? 기사 안에서 인용
@@ -145,11 +145,11 @@ export default function Home() {
               <span>아이디어·구현 대회 팀 수상</span>
             </div>
             <div className="project-links">
-              <a className="text-link" href="/pm/#qdd">
-                기획 사례 보기 <ArrowRight size={16} aria-hidden="true" />
-              </a>
               <a className="text-link" href="/developer/#qdd">
                 개발 사례 보기 <ArrowRight size={16} aria-hidden="true" />
+              </a>
+              <a className="text-link" href="/pm/#qdd">
+                기획 사례 보기 <ArrowRight size={16} aria-hidden="true" />
               </a>
               <a
                 className="source-link"
@@ -194,23 +194,23 @@ export default function Home() {
         <div>
           <p className="eyebrow">TWO PERSPECTIVES</p>
           <h2 id="perspectives-title">
-            기획의 이유부터,
+            구현의 디테일부터,
             <br />
-            구현의 디테일까지.
+            기획의 이유까지.
           </h2>
         </div>
         <div className="perspective-links">
-          <a href="/pm/">
-            <div>
-              <h3>Product Manager</h3>
-              <p>DeepShield · QDD의 문제와 선택</p>
-            </div>
-            <ArrowRight size={24} aria-hidden="true" />
-          </a>
           <a href="/developer/">
             <div>
               <h3>AI & Backend Developer</h3>
               <p>QDD · HR 업무 챗봇 · 인턴 경험의 구현과 검증</p>
+            </div>
+            <ArrowRight size={24} aria-hidden="true" />
+          </a>
+          <a href="/pm/">
+            <div>
+              <h3>Product Manager</h3>
+              <p>DeepShield · QDD의 문제와 선택</p>
             </div>
             <ArrowRight size={24} aria-hidden="true" />
           </a>

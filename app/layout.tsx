@@ -14,26 +14,26 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://chaeeunwang.github.io'),
-  title: '왕채은 | PM & Developer Portfolio',
+  title: '왕채은 | Developer & PM Portfolio',
   description:
-    '문제를 정의하고 기술로 구현하는 왕채은의 PM·AI 백엔드 개발자 포트폴리오',
+    '문제를 정의하고 기술로 구현하는 왕채은의 AI 백엔드 개발자·PM 포트폴리오',
   openGraph: {
     title: '왕채은 포트폴리오',
-    description: 'PM · AI BACKEND DEVELOPER',
+    description: 'AI BACKEND DEVELOPER · PM',
     type: 'website',
     images: [
       {
         url: 'https://chaeeunwang.github.io/og.png',
         width: 1730,
         height: 909,
-        alt: '왕채은 포트폴리오 — PM · AI BACKEND DEVELOPER',
+        alt: '왕채은 포트폴리오 — AI BACKEND DEVELOPER · PM',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: '왕채은 포트폴리오',
-    description: 'PM · AI BACKEND DEVELOPER',
+    description: 'AI BACKEND DEVELOPER · PM',
     images: ['https://chaeeunwang.github.io/og.png'],
   },
 };

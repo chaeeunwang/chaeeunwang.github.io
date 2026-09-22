@@ -1,6 +1,6 @@
 # 왕채은 포트폴리오
 
-[포트폴리오](https://chaeeunwang.github.io/) · [PM](https://chaeeunwang.github.io/pm/) · [AI·백엔드 개발](https://chaeeunwang.github.io/developer/)
+[포트폴리오](https://chaeeunwang.github.io/) · [AI·백엔드 개발](https://chaeeunwang.github.io/developer/) · [PM](https://chaeeunwang.github.io/pm/)
 
 React·Vinext로 작성하고 GitHub Pages에 정적 HTML로 배포합니다. 디자인과 내용 편집 기준은 [DESIGN.md](DESIGN.md)에 있습니다.
 

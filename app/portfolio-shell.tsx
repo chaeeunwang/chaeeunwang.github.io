@@ -22,14 +22,14 @@ export function PortfolioHeader({
           >
             Work
           </a>
-          <a href="/pm/" aria-current={active === 'pm' ? 'page' : undefined}>
-            PM
-          </a>
           <a
             href="/developer/"
             aria-current={active === 'developer' ? 'page' : undefined}
           >
             Developer
+          </a>
+          <a href="/pm/" aria-current={active === 'pm' ? 'page' : undefined}>
+            PM
           </a>
           <a className="header-contact" href="#contact">
             Contact <ArrowDown size={15} aria-hidden="true" />

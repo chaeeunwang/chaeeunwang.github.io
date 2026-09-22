@@ -1,5 +1,5 @@
+/* oxlint-disable nextjs/no-html-link-for-pages -- Native links avoid the deployed Vinext RSC navigation failure. */
 import { ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
 
 export function PortfolioHeader({
   active = 'home',
@@ -12,25 +12,25 @@ export function PortfolioHeader({
         본문 바로가기
       </a>
       <header className="site-header">
-        <Link className="wordmark" href="/" aria-label="왕채은 포트폴리오 홈">
+        <a className="wordmark" href="/" aria-label="왕채은 포트폴리오 홈">
           왕채은<span>.</span>
-        </Link>
+        </a>
         <nav aria-label="포트폴리오 탐색">
-          <Link
+          <a
             href="/#work"
             aria-current={active === 'home' ? 'page' : undefined}
           >
             Work
-          </Link>
-          <Link href="/pm" aria-current={active === 'pm' ? 'page' : undefined}>
+          </a>
+          <a href="/pm" aria-current={active === 'pm' ? 'page' : undefined}>
             PM
-          </Link>
-          <Link
+          </a>
+          <a
             href="/developer"
             aria-current={active === 'developer' ? 'page' : undefined}
           >
             Developer
-          </Link>
+          </a>
           <a className="header-contact" href="#contact">
             Contact <ArrowUpRight size={15} aria-hidden="true" />
           </a>

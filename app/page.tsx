@@ -1,5 +1,5 @@
+/* oxlint-disable nextjs/no-html-link-for-pages -- Native links avoid the deployed Vinext RSC navigation failure. */
 import { ArrowDown, ArrowRight, ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
 import { PortfolioFooter, PortfolioHeader } from './portfolio-shell';
 
 export default function Home() {
@@ -102,12 +102,12 @@ export default function Home() {
               </p>
             </div>
             <div className="project-links">
-              <Link className="text-link" href="/pm#qdd">
+              <a className="text-link" href="/pm#qdd">
                 제품 기획 <ArrowUpRight size={16} aria-hidden="true" />
-              </Link>
-              <Link className="text-link" href="/developer#qdd">
+              </a>
+              <a className="text-link" href="/developer#qdd">
                 구현 과정 <ArrowUpRight size={16} aria-hidden="true" />
-              </Link>
+              </a>
               <a
                 className="source-link"
                 href="https://github.com/chaeeunwang/Quote-Distortion-Detection"
@@ -141,9 +141,9 @@ export default function Home() {
               <ArrowRight size={16} aria-hidden="true" />
               <span>Context</span>
             </div>
-            <Link className="text-link" href="/developer#chatbot">
+            <a className="text-link" href="/developer#chatbot">
               구현 과정 보기 <ArrowUpRight size={16} aria-hidden="true" />
-            </Link>
+            </a>
           </article>
           <article>
             <p className="project-category">03 / AI SAFETY · 2024</p>
@@ -159,9 +159,9 @@ export default function Home() {
               <span>App Store 출시</span>
               <span>체인지메이커스 포럼 최우수상</span>
             </div>
-            <Link className="text-link" href="/pm#deepshield">
+            <a className="text-link" href="/pm#deepshield">
               문제와 해결 과정 <ArrowUpRight size={16} aria-hidden="true" />
-            </Link>
+            </a>
           </article>
         </div>
       </section>
@@ -176,20 +176,20 @@ export default function Home() {
           </h2>
         </div>
         <div className="perspective-links">
-          <Link href="/pm">
+          <a href="/pm">
             <div>
               <h3>Product Manager</h3>
               <p>문제 정의 · 판단 기준 · 제품의 방향</p>
             </div>
             <ArrowUpRight size={24} aria-hidden="true" />
-          </Link>
-          <Link href="/developer">
+          </a>
+          <a href="/developer">
             <div>
               <h3>AI & Backend Developer</h3>
               <p>시스템 구조 · 기술 선택 · 구현과 검증</p>
             </div>
             <ArrowUpRight size={24} aria-hidden="true" />
-          </Link>
+          </a>
         </div>
       </section>
       <PortfolioFooter />

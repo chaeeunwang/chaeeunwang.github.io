@@ -90,7 +90,9 @@
 
 - `public/portrait.jpg`: [본인 공개 이력서 사진](https://raw.githubusercontent.com/chaeeunwang/resume-nextjs/master/asset/myprofile.jpg), 350×450 원본. 홈에서는 42×54로 비율을 보존한다. 기존 `profile.png`는 GitHub identicon으로 인물 사진이 아니다.
 - QDD 홈 도식은 실제 화면 캡처가 아니라 공개 저장소의 처리 구조를 설명하는 도식이다. 이를 `SYSTEM OVERVIEW`로 표시한다. 저장소에 실제 화면 자산이 없어 생성 이미지로 보충하지 않는다.
-- [QDD README](https://github.com/chaeeunwang/Quote-Distortion-Detection): 총 데이터 4,646건(정상 2,510 + 왜곡 2,136). 기존 포트폴리오의 4,985건을 수정했다. F1 Macro는 README 0.8667, 공개 이력서 표기 0.86을 유지했다.
+- [QDD README](https://github.com/chaeeunwang/Quote-Distortion-Detection): 총 데이터 4,646건(정상 2,510 + 왜곡 2,136). 학습 3,717건·검증 929건, F1 Macro 0.8667을 팀 평가 결과로 표시한다. 초기 모델과의 동일 조건 비교가 확인되지 않아 향상 폭은 표시하지 않는다.
+- 사례는 본인 역할, 팀 결과, 구현·검증 범위를 구분한다. 모델 평가와 실서비스 효과를 혼용하지 않는다. 기록이 충돌하는 날짜·성능 수치는 근거를 확인하기 전 생략한다.
+- 최근 사례는 기존 사례 구성 안에 추가한다. 스사싣은 UI 프로토타입·API/DB 설계, HR Leave Assistant는 교육 실습을 확장한 개인 데모로 표시한다. 화면·색상·레이아웃 체계는 유지한다.
 - [DeepShield 기사](https://www.news1.kr/society/incident-accident/5546773)는 외부 근거 링크로 연결한다. 신문사 사진을 프로젝트 소유 이미지처럼 가져오지 않는다.
 
 ## 검증 기록 — 2026-09-22
@@ -103,3 +105,4 @@
 
 - 첫 배포의 운영 클릭 검증에서 Vinext RSC Link 오류를 발견했다. 정적 페이지 이동은 기본 `<a href>`로 통일해 클라이언트 라우터 의존성을 제거했다. 경로와 앵커는 유지한다.
 - 수정 후 로컬 프로덕션 서버에서도 홈 → PM → 개발자 실제 클릭 이동과 브라우저 오류 0건을 확인했다.
+- Obsidian 내용 검토 후 스사싣·HR 사례를 기존 구성에 추가했다. 세 경로의 1440·768·390·320px 렌더링, 데스크톱 스사싣·모바일 HR 시각 확인, 변경 TSX lint와 프로덕션 빌드를 통과했다. 프로젝트 모델·서버 자체의 재실행 검증과 구분한다.

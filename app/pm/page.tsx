@@ -8,44 +8,78 @@ const cases = [
     title: 'Quote Distortion Detection',
     subtitle: '뉴스 인용 왜곡을 사용자가 즉시 검증하는 Chrome Extension',
     period: '2025.08 — 2025.12 · 3인 팀',
-    role: '문제 정의 · 서비스 기획 총괄 · 시스템 설계 · 프론트엔드 구현',
+    role: '문제 정의 · 서비스 기획 · 처리 흐름 설계 · React 화면 구현',
     problem:
       '기존 팩트체크는 사실 여부에 집중해, 실제 발언의 의미가 기사에서 축소·확장·변형되는 문제를 사용자가 바로 확인하기 어려웠습니다.',
     decisions: [
       '기사 소비 흐름을 방해하지 않는 Chrome Extension을 핵심 접점으로 선택',
-      '인용문 추출 → 원문 탐색 → 문장 정렬 → 왜곡 판단의 E2E 사용자 흐름 설계',
-      '왜곡 데이터 부족을 핵심 리스크로 정의하고 GPT 기반 증강·라벨링 기준 수립',
-      '모델 후보를 비교해 성능과 서비스 적용 가능성이 가장 높은 MPNet 채택',
+      '인용문 추출 → 원문 탐색 → 문장 정렬 → 왜곡 판단의 흐름을 설계하고 React 화면 구현',
+      '원문을 잘못 찾으면 분류 결과도 의미가 없어지므로 원문 검색과 왜곡 분류를 분리해 처리 흐름 설계',
+      '왜곡 데이터 부족에 대응하는 증강·라벨링 기준과 팀의 MPNet 모델 선정에 참여',
     ],
     outcomes: [
-      ['0.86', '최종 F1 Macro'],
-      ['4,646', '구축·증강 데이터'],
-      ['2회', '아이디어·구현 대회 수상'],
+      ['0.8667', 'F1 Macro · 팀 평가'],
+      ['4,646', '전체 데이터 · 팀 구축'],
+      ['2회', '아이디어·구현 대회 · 팀 수상'],
     ],
+    evidence:
+      '공개 README 기준. 학습 3,717건·검증 929건으로 나눴으며, 위 수치는 팀의 모델 평가 결과입니다.',
     tags: ['Product Strategy', 'User Flow', 'Data Strategy', 'Figma', 'React'],
     href: 'https://github.com/chaeeunwang/Quote-Distortion-Detection',
     sourceLabel: 'GitHub에서 코드·결과 보기',
   },
   {
-    id: 'deepshield',
+    id: 'sss',
     number: '02',
+    title: '스사싣',
+    subtitle: '생각과 일상에서 시작하는 SKALA 교육생 소셜 매칭',
+    period: '2026.09 · 서비스 기획·UI 프로토타입',
+    role: '서비스 범위·공개 정책 결정 · 사용자 흐름 · UI·API·DB 설계',
+    problem:
+      '교육생이 서로를 알아가는 서비스에서 시험과 점수가 참여 부담이 될 수 있다고 가정했습니다. 성적보다 공개한 생각·풀이·일상을 통해 사람을 발견하는 흐름을 기획했습니다.',
+    decisions: [
+      '코테·SKCT는 선택형 자기표현 콘텐츠로 두고 필수 응시·점수·랭킹·채점 서버를 범위에서 제외',
+      '카드·공개 답변·라운지에서 프로필 → 관심 → 상호 관심 → 채팅으로 이어지는 핵심 흐름 구성',
+      '단방향 관심과 비공개 설문은 숨기고, 상호 관심일 때만 연결하도록 공개 범위 설계',
+      'AI는 규칙으로 거른 적격 후보 중 추천에만 사용하도록 설계하고, 소개글·대화의 대행은 제외',
+    ],
+    outcomes: [
+      ['Prototype', '반응형 화면·로컬 상호작용'],
+      ['API · DB', '화면에서 개발 계약으로 연결'],
+      ['정합성 검사', '명세 구조·참조 검사 통과'],
+    ],
+    evidence:
+      'OpenAPI 31개 경로·41개 operation, DBML 18개 테이블을 설계했습니다. 인증·서버·DB·AI 추천은 미연결 상태이며, 다음 검증은 교육생의 참여 부담과 공개 범위에 대한 사용자 확인입니다.',
+    tags: [
+      '서비스 범위',
+      '공개 정책',
+      '사용자 흐름',
+      'UI Prototype',
+      'OpenAPI',
+    ],
+  },
+  {
+    id: 'deepshield',
+    number: '03',
     title: 'DeepShield',
     subtitle: '딥페이크 피해를 사후 탐지가 아닌 사전 예방으로 전환',
-    period: '2024.09 — 2024.12 · 3인 팀',
-    role: '문제 정의 · 핵심 필터 기술 설계 · 품질 개선',
+    period: '2024 · 3인 팀',
+    role: '문제 정의 · 핵심 필터 설계·구현 · 시각 품질 조정',
     problem:
-      '딥페이크 대응이 생성 이후 탐지에 머무는 상황에서, 사용자가 사진을 공유하기 전에 얼굴 특징을 보호할 수 있는 예방형 접근이 필요했습니다.',
+      '사진이 공유된 뒤 피해에 대응하기 어렵다는 문제에 주목했습니다. 업로드 전에 얼굴 영역에 적대적 노이즈를 적용하는 예방형 필터를 만들었습니다.',
     decisions: [
       '사용자 사진의 얼굴 영역에만 Adversarial 노이즈를 적용하는 방식 선택',
       '랜드마크 기반 영역 탐지로 불필요한 이미지 훼손 최소화',
-      'Feathering·Blur를 적용해 보호 성능과 시각 품질 사이의 균형 조정',
-      '기술 데모를 앱 형태로 연결하고 사회적 문제와 사용자 효용을 함께 제시',
+      'Feathering·Blur로 얼굴 영역 경계와 노이즈의 시각적 이질감 조정',
+      '팀으로 필터를 앱에 연결하고 사용자가 사진을 공유하기 전 적용하는 흐름 제시',
     ],
     outcomes: [
-      ['App Store', '정식 출시'],
-      ['최우수상', '체인지메이커스 포럼'],
-      ['언론 보도', '사회적 관심 확보'],
+      ['App Store', '앱 출시 · 팀 결과'],
+      ['최우수상', '체인지메이커스 포럼 · 팀 수상'],
+      ['언론 보도', '뉴스1 개발팀 인터뷰'],
     ],
+    evidence:
+      '담당한 품질 조정은 노이즈의 시각적 이질감을 줄이는 작업입니다. 이를 딥페이크 방어 성능의 정량적 개선으로 제시하지 않습니다.',
     tags: ['Problem Framing', 'MVP', 'Risk & Trade-off', 'AI Safety'],
     href: 'https://www.news1.kr/society/incident-accident/5546773',
     sourceLabel: '뉴스1에서 개발팀 인터뷰 보기',
@@ -94,15 +128,17 @@ export default function PmPortfolio() {
                   <h3>{item.title}</h3>
                   <p className="case-subtitle">{item.subtitle}</p>
                 </div>
-                <a
-                  className="source-link"
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {item.sourceLabel}{' '}
-                  <ArrowUpRight size={16} aria-hidden="true" />
-                </a>
+                {'href' in item && (
+                  <a
+                    className="source-link"
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {item.sourceLabel}{' '}
+                    <ArrowUpRight size={16} aria-hidden="true" />
+                  </a>
+                )}
               </div>
 
               <div className="role-note">
@@ -131,6 +167,7 @@ export default function PmPortfolio() {
                   </div>
                 ))}
               </div>
+              <p className="case-subtitle">{item.evidence}</p>
               <ul className="tag-list" aria-label={`${item.title} 역량`}>
                 {item.tags.map((tag) => (
                   <li key={tag}>{tag}</li>
@@ -157,9 +194,10 @@ export default function PmPortfolio() {
         </article>
         <article>
           <span>03</span>
-          <h2>끝까지 연결합니다</h2>
+          <h2>구현 범위를 구체화합니다</h2>
           <p>
-            프로토타입·모델·API·화면이 하나의 흐름으로 동작하도록 구현합니다.
+            사용자 흐름을 화면과 API·데이터 계약으로 옮기고, 구현한 범위와 다음
+            검증을 구분합니다.
           </p>
         </article>
       </section>
@@ -171,20 +209,25 @@ export default function PmPortfolio() {
         </div>
         <div className="timeline">
           <article>
-            <time>2025.02 — 05</time>
-            <h3>아프로시스 공공사업부 인턴</h3>
+            <time>2026.07 — 현재</time>
+            <h3>SK AX SKALA</h3>
             <p>
-              sLLM 라우팅, Redis 세션, 개인정보 마스킹을 서비스 요구사항에서
-              구현 구조로 구체화
+              AI·백엔드 교육 수강 중 · HR 업무 챗봇 구현, 스사싣 서비스
+              기획·설계
             </p>
           </article>
           <article>
             <time>2025.08 — 12</time>
             <h3>고려대학교 지능정보 SW 아카데미</h3>
             <p>
-              문제 정의부터 데이터·모델·Chrome Extension까지 전 과정을 주도하고
-              2개 대회 수상
+              QDD 서비스 기획·흐름 설계·React 화면 구현 담당 · 팀으로
+              아이디어·구현 대회 수상
             </p>
+          </article>
+          <article>
+            <time>2025.02 — 05</time>
+            <h3>아프로시스 공공사업부 인턴</h3>
+            <p>sLLM 모델 라우팅, Redis 세션 문맥, 개인정보 마스킹 개발 보조</p>
           </article>
           <article>
             <time>2019.03 — 2025.08</time>

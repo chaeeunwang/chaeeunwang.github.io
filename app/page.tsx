@@ -89,16 +89,16 @@ export default function Home() {
               왜곡을 확인하는 Chrome 확장 프로그램입니다.
             </p>
             <p className="contribution">
-              <span>담당</span>서비스 기획 · 시스템 설계 · 프론트엔드
+              <span>담당</span>서비스 기획 · 처리 흐름 설계 · React 화면
             </p>
             <div className="project-evidence">
               <strong>
-                0.86<span>F1 Macro</span>
+                0.8667<span>F1 Macro · 팀 평가</span>
               </strong>
               <p>
-                모델 비교부터
+                공개 README 기준
                 <br />
-                사용자 화면까지
+                MPNet 분류 결과
               </p>
             </div>
             <div className="project-links">
@@ -125,20 +125,20 @@ export default function Home() {
             <p className="project-category">02 / BACKEND · INTERNSHIP</p>
             <h3>sLLM 챗봇 백엔드</h3>
             <p className="project-description">
-              질문에 맞는 모델을 찾고, 대화의 맥락을 이어갑니다. 세션 관리와
-              개인정보 보호를 함께 구현했습니다.
+              공공사업부 인턴으로 질문 분류와 모델 라우팅, 세션 문맥 관리,
+              개인정보 마스킹 개발을 보조했습니다.
             </p>
             <p className="contribution">
               <span>담당</span>모델 라우팅 · Redis 세션 · 개인정보 마스킹
             </p>
             <div
               className="mini-flow"
-              aria-label="챗봇 주요 처리: 개인정보 보호, 모델 라우팅, 대화 문맥 관리"
+              aria-label="챗봇 담당 기능: 개인정보 보호, 모델 라우팅, 대화 문맥 관리"
             >
               <span>Privacy</span>
-              <ArrowRight size={16} aria-hidden="true" />
+              <span aria-hidden="true">·</span>
               <span>Routing</span>
-              <ArrowRight size={16} aria-hidden="true" />
+              <span aria-hidden="true">·</span>
               <span>Context</span>
             </div>
             <a className="text-link" href="/developer#chatbot">
@@ -149,14 +149,14 @@ export default function Home() {
             <p className="project-category">03 / AI SAFETY · 2024</p>
             <h3>DeepShield</h3>
             <p className="project-description">
-              사진을 공유하기 전에 얼굴 특징을 보호합니다. 딥페이크 피해를
-              예방하기 위한 이미지 보호 필터입니다.
+              사진을 공유하기 전 얼굴 영역에 적대적 노이즈를 적용하는 예방형
+              필터입니다. 필터 구현과 시각 품질 조정을 맡았습니다.
             </p>
             <p className="contribution">
               <span>담당</span>핵심 필터 설계 · 노이즈 적용 · 시각 품질 개선
             </p>
             <div className="project-recognition">
-              <span>App Store 출시</span>
+              <span>팀 결과 · App Store 출시</span>
               <span>체인지메이커스 포럼 최우수상</span>
             </div>
             <a className="text-link" href="/pm#deepshield">
@@ -179,14 +179,14 @@ export default function Home() {
           <a href="/pm">
             <div>
               <h3>Product Manager</h3>
-              <p>문제 정의 · 판단 기준 · 제품의 방향</p>
+              <p>QDD · 스사싣 · DeepShield의 문제와 선택</p>
             </div>
             <ArrowUpRight size={24} aria-hidden="true" />
           </a>
           <a href="/developer">
             <div>
               <h3>AI & Backend Developer</h3>
-              <p>시스템 구조 · 기술 선택 · 구현과 검증</p>
+              <p>HR 업무 챗봇 · 인턴 경험 · NLP 구현과 검증</p>
             </div>
             <ArrowUpRight size={24} aria-hidden="true" />
           </a>

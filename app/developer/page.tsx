@@ -4,6 +4,86 @@ import { PortfolioHeader, PortfolioFooter } from '../portfolio-shell';
 const projects = [
   {
     id: 'P01',
+    anchor: 'deepshield',
+    title: 'DeepShield',
+    label: '2024 · Computer Vision · 3인 팀',
+    summary:
+      '사진을 공유하기 전에 얼굴 영역에 적대적 노이즈를 적용하는 딥페이크 예방 필터입니다. 사진 전체가 변형되는 문제를 줄이기 위해 적용 영역을 제한하고, 필터 경계와 패턴의 시각적 이질감을 조정했습니다.',
+    role: '문제 정의·핵심 필터 설계 및 구현·얼굴 영역 선택 로직·Feathering과 Blur를 이용한 시각 품질 조정',
+    architecture: [
+      '입력 사진',
+      '얼굴 · 랜드마크 탐지',
+      '얼굴 영역 선택',
+      '적대적 노이즈 적용',
+      'Feathering · Blur',
+      '앱 결과 이미지',
+    ],
+    decisions: [
+      [
+        '사진 전체에서 얼굴 영역으로',
+        '노이즈가 얼굴 밖까지 적용되면 배경 등 원래 사진의 모습도 달라집니다. 얼굴 랜드마크를 기반으로 영역을 선택하고, 해당 영역에만 필터를 적용하는 로직을 구현했습니다.',
+      ],
+      [
+        '필터 경계와 패턴을 따로 조정',
+        '적용 영역의 경계가 두드러지는 문제에는 Feathering을, 노이즈 패턴의 이질감에는 Blur를 적용했습니다. 사용자가 사진을 일상적으로 활용할 수 있도록 시각적 품질을 다듬었습니다.',
+      ],
+      [
+        '핵심 필터를 앱으로 연결',
+        '필터 설계·구현을 맡고 앱 개발·배포 담당 팀원들과 협업했습니다. 팀은 App Store에 앱을 출시했고, 개발 과정과 문제의식이 언론 인터뷰로 소개됐습니다.',
+      ],
+    ],
+    stack: [
+      'Python',
+      'TensorFlow',
+      'Computer Vision',
+      '얼굴 랜드마크',
+      'Feathering',
+      'Blur',
+    ],
+    result:
+      '팀 App Store 출시 · 고려대학교 체인지메이커스 포럼 최우수상(2024.11) · 개발팀 언론 인터뷰',
+    scope:
+      '핵심 필터 구현은 개인 담당, 앱 출시·수상은 팀 성과입니다. Feathering·Blur는 시각 품질 조정이며, 공격 모델별 방어 성능 수치를 뜻하지 않습니다.',
+    href: 'https://www.news1.kr/society/incident-accident/5546773',
+    linkLabel: '개발팀 인터뷰',
+  },
+  {
+    id: 'P02',
+    anchor: 'particle-cnn',
+    title: '입자 궤적 이미지 분류',
+    label: '인공지능물리학 · 실험 데이터 · CNN',
+    summary:
+      '자기장이 걸린 안개상자에서 입자의 궤적을 직접 촬영하고, 이미지로 입자의 종류를 분류한 수업 프로젝트입니다. 관측 사진을 학습 데이터로 가공하고 CNN을 파인튜닝하는 과정을 수행했습니다.',
+    role: '안개상자 궤적 촬영·궤적 중심 이미지 추출·데이터셋 구성 및 분할·CNN 파인튜닝',
+    architecture: [
+      '안개상자 실험 · 촬영',
+      '궤적 중심 정사각형 crop',
+      '이미지 데이터셋 구성',
+      '데이터 분할',
+      'CNN 파인튜닝 · 분류',
+    ],
+    decisions: [
+      [
+        '관측에서 시작한 데이터셋',
+        '완성된 공개 이미지 데이터 대신, 안개상자에서 관측한 알파·베타 입자의 궤적을 직접 촬영했습니다. 물리 실험에서 얻은 관측 대상을 이미지 분류 문제의 입력으로 만들었습니다.',
+      ],
+      [
+        '궤적 중심으로 입력 구성',
+        '촬영 사진에서 궤적을 중심으로 일정한 크기의 정사각형 이미지를 잘라 데이터셋을 구성했습니다. 사진을 수집하는 단계와 모델에 넣을 이미지로 가공하는 단계를 연결했습니다.',
+      ],
+      [
+        '데이터 분할 후 CNN 파인튜닝',
+        '구성한 데이터를 분할하고 CNN을 파인튜닝해 입자 종류를 분류했습니다. 새로운 모델 구조를 제안하기보다 직접 만든 실험 데이터를 기존 모델의 학습에 활용한 경험입니다.',
+      ],
+    ],
+    stack: ['Python', 'TensorFlow', 'CNN', '이미지 전처리', 'Fine-tuning'],
+    result:
+      '직접 촬영한 궤적 사진을 이미지 데이터셋으로 구성하고, 전처리·분할·CNN 파인튜닝까지 수행',
+    scope:
+      '수행 과정은 당시 경험을 정리한 기록에 근거합니다. 원본 코드·평가 로그를 재확인하지 못해 모델명과 정량 성능은 제시하지 않습니다.',
+  },
+  {
+    id: 'P03',
     anchor: 'qdd',
     title: 'Quote Distortion Detection',
     label: '2025.08–12 · NLP · 3인 팀',
@@ -39,7 +119,7 @@ const projects = [
     href: 'https://github.com/chaeeunwang/Quote-Distortion-Detection',
   },
   {
-    id: 'P02',
+    id: 'P04',
     anchor: 'hr-leave-assistant',
     title: 'HR Leave Assistant',
     label: '2026.08 · SKALA 개인 실습 확장',
@@ -84,7 +164,7 @@ const projects = [
     href: 'https://github.com/chaeeunwang/hr-leave-assistant',
   },
   {
-    id: 'P03',
+    id: 'P05',
     anchor: 'chatbot',
     title: 'sLLM 챗봇 백엔드',
     label: '2025.02–05 · Aphrosys 인턴',
@@ -120,7 +200,7 @@ const projects = [
       '공개 이력과 업무 기록에 근거한 담당 기능입니다. 위 구성은 기능의 묶음이며 실제 호출 순서를 뜻하지 않습니다.',
   },
   {
-    id: 'P04',
+    id: 'P06',
     anchor: 'risk-detection',
     title: '위험 대화 탐지 모델',
     label: '2024.07–11 · AI보안 교육 프로젝트',
@@ -176,8 +256,8 @@ export default function DeveloperPortfolio() {
           흐름을 구현합니다.
         </h1>
         <p className="lead">
-          모델의 응답을 사용자 화면과 업무 처리로 연결합니다. 권한과 상태, 중복
-          실행을 고려해 백엔드를 구현합니다.
+          실험 데이터를 학습 입력으로 만들고, 이미지 처리와 모델의 결과를
+          서비스로 연결합니다. 백엔드에서는 권한과 상태, 중복 실행을 다룹니다.
         </p>
         <nav className="case-navigation" aria-label="구현 사례 바로가기">
           {projects.map((project) => (
@@ -216,7 +296,8 @@ export default function DeveloperPortfolio() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    GitHub <ArrowUpRight size={15} aria-hidden="true" />
+                    {'linkLabel' in project ? project.linkLabel : 'GitHub'}{' '}
+                    <ArrowUpRight size={15} aria-hidden="true" />
                   </a>
                 </div>
               ) : null}
@@ -275,7 +356,8 @@ export default function DeveloperPortfolio() {
           <article>
             <h3>AI·데이터</h3>
             <p>
-              Spring AI · RAG · LangChain · KoBERT · SBERT · MPNet · KoELECTRA
+              TensorFlow · CNN · Computer Vision · Spring AI · RAG · LangChain ·
+              KoBERT · SBERT · MPNet · KoELECTRA
             </p>
           </article>
           <article>

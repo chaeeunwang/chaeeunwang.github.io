@@ -52,7 +52,7 @@ export default function Home() {
           <div className="featured-copy">
             <p className="project-category">01 / AI SAFETY · 2024</p>
             <h3>
-              <a href="/pm/#deepshield">DeepShield</a>
+              <a href="/developer/#deepshield">DeepShield</a>
             </h3>
             <p className="project-description">
               사진을 공유하기 전 얼굴 영역에 적대적 노이즈를 적용하는 예방형
@@ -72,6 +72,9 @@ export default function Home() {
               </div>
             </div>
             <div className="project-links">
+              <a className="text-link" href="/developer/#deepshield">
+                개발 사례 보기 <ArrowRight size={16} aria-hidden="true" />
+              </a>
               <a className="text-link" href="/pm/#deepshield">
                 기획 사례 보기 <ArrowRight size={16} aria-hidden="true" />
               </a>
@@ -203,7 +206,7 @@ export default function Home() {
           <a href="/developer/">
             <div>
               <h3>AI & Backend Developer</h3>
-              <p>QDD · HR 업무 챗봇 · 인턴 경험의 구현과 검증</p>
+              <p>Vision · NLP · 백엔드 프로젝트의 구현과 검증</p>
             </div>
             <ArrowRight size={24} aria-hidden="true" />
           </a>
